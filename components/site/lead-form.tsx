@@ -39,7 +39,6 @@ export function LeadForm({ titleAs = "h2" }: { titleAs?: "h1" | "h2" }) {
   const [message, setMessage] = useState("")
   const [pending, setPending] = useState(false)
   const [done, setDone] = useState(false)
-  const [emailed, setEmailed] = useState(false)
 
   async function onSubmit(event: React.FormEvent) {
     event.preventDefault()
@@ -74,16 +73,14 @@ export function LeadForm({ titleAs = "h2" }: { titleAs?: "h1" | "h2" }) {
       })
       const data = (await response.json()) as {
         ok?: boolean
-        emailed?: boolean
         message?: string
         fieldErrors?: FieldErrors
       }
       if (!response.ok || !data.ok) {
         setErrors(data.fieldErrors ?? {})
-        setMessage(data.message || "We couldn’t send that. Email support@talktogenie.ai.")
+        setMessage(data.message || "We couldn’t save that. Email support@talktogenie.ai.")
         return
       }
-      setEmailed(Boolean(data.emailed))
       setDone(true)
     } catch {
       setMessage("We couldn’t reach the server. Email support@talktogenie.ai and include your portfolio size.")
@@ -116,11 +113,6 @@ export function LeadForm({ titleAs = "h2" }: { titleAs?: "h1" | "h2" }) {
             <p className="mt-3 font-display text-4xl text-ink">Your wish has been received. 🧞‍♂️</p>
             <p className="mt-4 text-mist">
               We’ll reply to {email} about {company}.
-            </p>
-            <p className="mt-3 text-sm text-mist">
-              {emailed
-                ? "Sent to support@talktogenie.ai."
-                : "Email delivery is not configured on this server yet. Write support@talktogenie.ai directly so the wish is not waiting on a missing mail key."}
             </p>
           </div>
         ) : (

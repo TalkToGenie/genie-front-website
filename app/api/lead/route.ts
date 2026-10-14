@@ -1,5 +1,5 @@
 import { validateLead } from "@/lib/lead-schema"
-import { emailLead, formatLead, type StoredLead } from "@/lib/lead-store"
+import { storeLead, type StoredLead } from "@/lib/lead-store"
 
 export const runtime = "nodejs"
 
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
   if (body && typeof body === "object" && "faxNumber" in body) {
     const fax = (body as { faxNumber?: unknown }).faxNumber
     if (typeof fax === "string" && fax.trim()) {
-      return Response.json({ ok: true, emailed: false })
+      return Response.json({ ok: true })
     }
   }
 
@@ -55,27 +55,21 @@ export async function POST(request: Request) {
     ...parsed.value,
     id: crypto.randomUUID(),
     createdAt: new Date().toISOString(),
-    emailed: false,
   }
 
   try {
-    lead.emailed = await emailLead(lead)
+    storeLead(lead)
   } catch (error) {
-    console.error("demo email failed", error)
-    lead.emailed = false
-  }
-
-  if (!lead.emailed) {
-    console.error(`demo not emailed ${lead.id}\n${formatLead(lead)}`)
+    console.error("demo store failed", error)
     return Response.json(
       {
         ok: false,
-        message: "We couldn’t send that. Email support@talktogenie.ai and we’ll take it from there.",
+        message: "We couldn’t save that. Email support@talktogenie.ai and we’ll take it from there.",
       },
       { status: 500 },
     )
   }
 
-  console.info(`demo emailed ${lead.id} company=${lead.company}`)
-  return Response.json({ ok: true, emailed: true })
+  console.info(`demo stored ${lead.id} company=${lead.company}`)
+  return Response.json({ ok: true })
 }
