@@ -38,6 +38,9 @@ export function SiteFooter() {
           <Link href="/superhost" className="text-mist hover:text-[#123848]">
             Superhost case study
           </Link>
+          <Link href="/privacy-policy" className="text-mist hover:text-[#123848]">
+            Privacy policy
+          </Link>
         </div>
       </div>
     </footer>
