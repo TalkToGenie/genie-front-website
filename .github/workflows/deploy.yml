@@ -1,0 +1,68 @@
+# Builds the site on every push and pull request; on main it also publishes the
+# build to the `deploy` branch, which the server at talktogenie.ai pulls within
+# a minute (zero-downtime swap, health-checked). Nothing here can reach the
+# server and the workflow needs no secrets beyond the built-in token.
+#
+# The bundle on `deploy` is Next's standalone output: server.js, the
+# node_modules it traces, .next/static and public. Runtime settings (the lead
+# form's SES keys) live in an env file on the server, never in this repo.
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      # The server runs Node 20 (/usr/bin/node on srv2); build on the same major
+      # so native modules in the bundle (sharp) match.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+
+      - name: Assemble the standalone bundle
+        run: |
+          set -euo pipefail
+          rm -rf bundle
+          cp -a .next/standalone bundle
+          mkdir -p bundle/.next
+          cp -a .next/static bundle/.next/static
+          cp -a public bundle/public
+          # A local env file must never ship; the server supplies its own.
+          rm -f bundle/.env bundle/.env.*
+          test -f bundle/server.js
+          printf '%s\n' "$GITHUB_SHA" > bundle/BUILD_SHA
+          du -sh bundle
+
+      - name: Publish to the deploy branch
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          set -euo pipefail
+          cd bundle
+          git init -q -b deploy
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -f
+          git commit -q -m "Build of ${GITHUB_SHA}"
+          git push -q --force "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
