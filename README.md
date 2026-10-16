@@ -32,7 +32,7 @@ npm run pitch
 
 ## Lead form
 
-Request Demo submissions require a telephone number. They are not written to a local database. Each request is emailed to `support@talktogenie.ai` through Amazon SES, from `support@mench.com`, when these are set in `.env.local`:
+Sign Up submissions require a telephone number. They are not written to a local database. Each request is emailed to `support@talktogenie.ai` through Amazon SES, from `support@mench.com`, when these are set in `.env.local`:
 
 ```bash
 AWS_ACCESS_KEY_ID=

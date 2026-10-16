@@ -70,7 +70,7 @@ export function SiteHeader() {
               className: "h-10 rounded-full px-3 text-sm whitespace-nowrap sm:px-4",
             })}
           >
-            Request Demo
+            Sign Up
           </Link>
           <button
             type="button"

@@ -20,7 +20,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-row flex-wrap items-center justify-center gap-1 sm:gap-3">
             <Link href="/meet" className={buttonVariants({ className: "h-12 rounded-full px-6 text-sm" })}>
-              Request Demo
+              Sign Up
             </Link>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-2 text-xs text-ink">

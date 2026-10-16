@@ -65,7 +65,7 @@ export function Pricing({
       <div className="mt-4 rounded-[28px] border border-[#d4af37]/35 px-6 py-5">
         <p className="text-ink">2,000+ listings? Talk to us about enterprise pricing.</p>
         <Link href="/meet" className="mt-3 inline-flex text-sm text-[#b8860b] underline-offset-4 hover:underline">
-          Request Demo
+          Sign Up
         </Link>
       </div>
 
@@ -112,7 +112,7 @@ export function Pricing({
 
       <div className="mt-8">
         <Link href="/meet" className={buttonVariants({ className: "h-12 rounded-full px-6" })}>
-          Request Demo
+          Sign Up
         </Link>
       </div>
     </Section>

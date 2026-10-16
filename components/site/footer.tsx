@@ -33,7 +33,7 @@ export function SiteFooter() {
             </Link>
           ))}
           <Link href="/meet" className="text-mist hover:text-[#123848]">
-            Request Demo
+            Sign Up
           </Link>
           <Link href="/superhost" className="text-mist hover:text-[#123848]">
             Superhost case study

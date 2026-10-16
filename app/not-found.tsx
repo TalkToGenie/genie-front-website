@@ -21,7 +21,7 @@ export default function NotFound() {
             className: "h-11 rounded-full border-[#2eafd0]/30 px-5 text-ink hover:bg-[#fff4d6] hover:text-[#123848]",
           })}
         >
-          Request Demo
+          Sign Up
         </Link>
       </div>
     </div>
