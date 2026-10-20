@@ -35,7 +35,7 @@ export function SiteHeader() {
           <span className="shrink-0 text-[2.35rem] leading-none sm:text-[3.375rem]" aria-hidden="true">
             🧞‍♂️
           </span>
-          <span className="truncate">TalkToGenie.ai</span>
+          <span className="truncate">TalkToGenie</span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">

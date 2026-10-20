@@ -1,0 +1,12 @@
+---
+description: Push and deploy from the presentgenie branch
+alwaysApply: true
+---
+
+# Default branch
+
+`presentgenie` is the default branch for this repository.
+
+- Commit and push to `presentgenie`.
+- Do not push to `main` unless the user explicitly asks.
+- A push to `presentgenie` runs `.github/workflows/deploy.yml`, which publishes the production build to the `deploy` branch. The live site pulls that build automatically.

@@ -1,7 +1,8 @@
-# Builds the site on every push and pull request; on main it also publishes the
-# build to the `deploy` branch, which the server at talktogenie.ai pulls within
-# a minute (zero-downtime swap, health-checked). Nothing here can reach the
-# server and the workflow needs no secrets beyond the built-in token.
+# Builds the site on every push and pull request; on presentgenie it also
+# publishes the build to the `deploy` branch, which the server at
+# talktogenie.ai pulls within a minute (zero-downtime swap, health-checked).
+# Nothing here can reach the server and the workflow needs no secrets beyond
+# the built-in token.
 #
 # The bundle on `deploy` is Next's standalone output: server.js, the
 # node_modules it traces, .next/static and public. Runtime settings (the lead
@@ -10,7 +11,7 @@ name: Build and deploy
 
 on:
   push:
-    branches: [main]
+    branches: [presentgenie]
   pull_request:
   workflow_dispatch:
 
@@ -54,7 +55,7 @@ jobs:
           du -sh bundle
 
       - name: Publish to the deploy branch
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/presentgenie'
         run: |
           set -euo pipefail
           cd bundle
