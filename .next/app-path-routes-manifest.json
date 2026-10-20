@@ -1,0 +1,17 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/apple-icon.png/route": "/apple-icon.png",
+  "/apps/page": "/apps",
+  "/how-it-works/page": "/how-it-works",
+  "/icon.svg/route": "/icon.svg",
+  "/investors/page": "/investors",
+  "/lamp/page": "/lamp",
+  "/page": "/",
+  "/pricing/page": "/pricing",
+  "/privacy-policy/page": "/privacy-policy",
+  "/product/page": "/product",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/superhost/page": "/superhost"
+}

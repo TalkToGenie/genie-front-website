@@ -1,0 +1,21 @@
+1:"$Sreact.fragment"
+2:I[5801,["/_next/static/chunks/2s59k1yd7tfl9.js","/_next/static/chunks/1-bbize_zonaw.js","/_next/static/chunks/1fz1wl_w5wo0g.js","/_next/static/chunks/334d09m7euabe.js"],"Pricing"]
+3:I[97367,["/_next/static/chunks/2s59k1yd7tfl9.js","/_next/static/chunks/1-bbize_zonaw.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[97367,["/_next/static/chunks/2s59k1yd7tfl9.js","/_next/static/chunks/1-bbize_zonaw.js"],"ViewportBoundary"]
+9:I[97367,["/_next/static/chunks/2s59k1yd7tfl9.js","/_next/static/chunks/1-bbize_zonaw.js"],"MetadataBoundary"]
+a:I[27201,["/_next/static/chunks/2s59k1yd7tfl9.js","/_next/static/chunks/1-bbize_zonaw.js"],"IconMark"]
+c:I[39756,["/_next/static/chunks/2s59k1yd7tfl9.js","/_next/static/chunks/1-bbize_zonaw.js"],"default"]
+d:I[37457,["/_next/static/chunks/2s59k1yd7tfl9.js","/_next/static/chunks/1-bbize_zonaw.js"],"default"]
+7:X
+f:X
+f:C
+0:{"buildId":"qbGMkYKoeyncW_QjXM-8S","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"detailed":true,"titleAs":"h1"}],[["$","script","script-0",{"src":"/_next/static/chunks/1fz1wl_w5wo0g.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/334d09m7euabe.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Pricing · TalkToGenie.ai"}],["$","meta","1",{"name":"description","content":"Simple monthly per-listing pricing for TalkToGenie.ai: $25, $20, or $18 by portfolio size, plus the Genie Lamp at $85. The lamp includes the 3D-printed frame and a Google Nest Mini that wakes on Hey Genie."}],["$","meta","2",{"property":"og:title","content":"TalkToGenie.ai — Hospitality. On Autopilot."}],["$","meta","3",{"property":"og:description","content":"Your wish is my command. An on-demand concierge that grants a guest’s wishes 24/7, with speed and consistency."}],["$","meta","4",{"property":"og:site_name","content":"TalkToGenie.ai"}],["$","meta","5",{"property":"og:type","content":"website"}],["$","meta","6",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","7",{"name":"twitter:title","content":"TalkToGenie.ai — Hospitality. On Autopilot."}],["$","meta","8",{"name":"twitter:description","content":"Your wish is my command. An on-demand concierge for hospitality, 24/7."}],["$","link","9",{"rel":"icon","href":"/icon.svg?icon.06ylrh4h21jde.svg","sizes":"any","type":"image/svg+xml"}],["$","link","10",{"rel":"apple-touch-icon","href":"/apple-icon.png?apple-icon.10p45m1bddmi0.png","sizes":"180x180","type":"image/png"}],["$","$La","11",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":"$@b","staleTime":"$7","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@e","staleTime":"$7","varyParams":"$f"}],"isUpgradeableISRFallback":false,"a":"$@10","rootVaryParams":null,"needsRuntimeRequest":"$@11"}
+5:null
+11:true
+7:300
+7:C
+10:0
+b:"$undefined"
+e:"$undefined"
+6:"$undefined"
