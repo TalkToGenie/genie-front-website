@@ -7,6 +7,9 @@ alwaysApply: true
 
 `presentgenie` is the default branch for this repository.
 
-- Commit and push to `presentgenie`.
+After a requested change is finished, commit it and push to `presentgenie` without asking for confirmation.
+
+- Stage only the files for that change. Leave unrelated files unstaged.
 - Do not push to `main` unless the user explicitly asks.
+- Do not force-push, skip hooks, or commit secrets.
 - A push to `presentgenie` runs `.github/workflows/deploy.yml`, which publishes the production build to the `deploy` branch. The live site pulls that build automatically.
