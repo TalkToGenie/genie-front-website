@@ -1,5 +1,7 @@
 # TalkToGenie.ai
 
+<!-- Repository: https://github.com/TalkToGenie/genie-front-website -->
+
 Marketing site for Genie, the autonomous operating layer for hospitality.
 
 Genie is positioned above an operator’s existing stack. Operators connect the systems they already use, set policies and escalation boundaries, and Genie executes inside those boundaries: guest communication, tasks, upsells, reservation reconciliation, and a physical voice concierge.
