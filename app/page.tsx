@@ -4,7 +4,6 @@ import { AskGenie } from "@/components/site/ask-genie"
 import { Hero } from "@/components/site/hero"
 import { HowItWorks } from "@/components/site/how-it-works"
 import { Lamp } from "@/components/site/lamp"
-import { LeadForm } from "@/components/site/lead-form"
 import { Modules } from "@/components/site/modules"
 import { Outcomes } from "@/components/site/outcomes"
 import { Pricing } from "@/components/site/pricing"
@@ -33,7 +32,6 @@ export default function Home() {
       <Analytics />
       <CaseStudy />
       <Pricing />
-      <LeadForm />
     </>
   )
 }

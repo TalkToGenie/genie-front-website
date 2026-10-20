@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
         destination: "/apps",
         permanent: false,
       },
+      {
+        source: "/meet",
+        destination: "https://app.talktogenie.ai",
+        permanent: true,
+      },
     ]
   },
 };

@@ -30,19 +30,9 @@ Rebuild the deck files with:
 npm run pitch
 ```
 
-## Lead form
+## Log in and sign up
 
-Sign Up submissions require a telephone number. They are not written to a local database. Each request is emailed to `support@talktogenie.ai` through Amazon SES, from `support@mench.com`, when these are set in `.env.local`:
-
-```bash
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-AWS_REGION=us-west-2
-SES_FROM=support@mench.com
-LEAD_INBOX=support@talktogenie.ai
-```
-
-The sender must be verified in that SES region. The message includes every field from the form. If mail credentials are missing, the visitor is told to write the inbox directly.
+The site has one account button, labeled Sign Up/In. It opens [https://app.talktogenie.ai](https://app.talktogenie.ai). `/meet` redirects there. Account creation starts in the app when an email or telephone number is not already on file.
 
 ## Pricing shown on the site
 

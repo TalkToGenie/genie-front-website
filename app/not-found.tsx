@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { buttonVariants } from "@/components/ui/button"
+import { AppEntryLink } from "@/components/site/app-entry"
 import { Display } from "@/components/site/section"
 
 export default function NotFound() {
@@ -14,15 +15,10 @@ export default function NotFound() {
         <Link href="/" className={buttonVariants({ className: "h-11 rounded-full px-5" })}>
           Back home
         </Link>
-        <Link
-          href="/meet"
-          className={buttonVariants({
-            variant: "outline",
-            className: "h-11 rounded-full border-[#2eafd0]/30 px-5 text-ink hover:bg-[#fff4d6] hover:text-[#123848]",
-          })}
-        >
-          Sign Up
-        </Link>
+        <AppEntryLink
+          variant="outline"
+          className="h-11 border-[#2eafd0]/30 px-5 text-ink hover:bg-[#fff4d6] hover:text-[#123848]"
+        />
       </div>
     </div>
   )

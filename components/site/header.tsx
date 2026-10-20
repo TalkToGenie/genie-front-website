@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
-import { buttonVariants } from "@/components/ui/button"
+import { AppEntryLink } from "@/components/site/app-entry"
 import { NAV } from "@/lib/content"
 import { cn } from "@/lib/utils"
 
@@ -58,20 +58,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-1.5 sm:gap-2">
-          <a
-            href="https://app.talktogenie.ai/"
-            className="inline-flex h-10 items-center rounded-full px-2.5 text-sm whitespace-nowrap text-mist hover:text-ink sm:px-3"
-          >
-            Log in
-          </a>
-          <Link
-            href="/meet"
-            className={buttonVariants({
-              className: "h-10 rounded-full px-3 text-sm whitespace-nowrap sm:px-4",
-            })}
-          >
-            Sign Up
-          </Link>
+          <AppEntryLink className="h-11 px-4 text-sm shadow-[0_8px_20px_rgba(18,56,72,0.16)] sm:h-12 sm:px-6 sm:text-base" />
           <button
             type="button"
             className="inline-flex size-10 items-center justify-center rounded-full border border-[#d4af37]/35 text-ink lg:hidden"

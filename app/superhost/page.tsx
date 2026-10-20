@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import { CaseStudy } from "@/components/site/case-study"
-import { LeadForm } from "@/components/site/lead-form"
 
 export const metadata: Metadata = {
   title: "Superhost case study",
@@ -9,10 +8,5 @@ export const metadata: Metadata = {
 }
 
 export default function SuperhostPage() {
-  return (
-    <>
-      <CaseStudy titleAs="h1" detailed />
-      <LeadForm />
-    </>
-  )
+  return <CaseStudy titleAs="h1" detailed />
 }

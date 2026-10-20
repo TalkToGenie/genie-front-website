@@ -1,3 +1,6 @@
+export const APP_URL = "https://app.talktogenie.ai"
+export const APP_ENTRY_LABEL = "Sign Up/In"
+
 export const NAV = [
   { href: "/product", label: "Product" },
   { href: "/#features", label: "Features" },

@@ -2,7 +2,8 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { buttonVariants } from "@/components/ui/button"
+import { AppEntryLink } from "@/components/site/app-entry"
+import { APP_ENTRY_LABEL, APP_URL } from "@/lib/content"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { bandForListings, LAMP_PRICE, PRICING_BANDS, rateForListings, usd } from "@/lib/pricing"
@@ -64,9 +65,9 @@ export function Pricing({
       </article>
       <div className="mt-4 rounded-[28px] border border-[#d4af37]/35 px-6 py-5">
         <p className="text-ink">2,000+ listings? Talk to us about enterprise pricing.</p>
-        <Link href="/meet" className="mt-3 inline-flex text-sm text-[#b8860b] underline-offset-4 hover:underline">
-          Sign Up
-        </Link>
+        <a href={APP_URL} className="mt-3 inline-flex text-sm text-[#b8860b] underline-offset-4 hover:underline">
+          {APP_ENTRY_LABEL}
+        </a>
       </div>
 
       {detailed ? (
@@ -111,9 +112,7 @@ export function Pricing({
       )}
 
       <div className="mt-8">
-        <Link href="/meet" className={buttonVariants({ className: "h-12 rounded-full px-6" })}>
-          Sign Up
-        </Link>
+        <AppEntryLink />
       </div>
     </Section>
   )

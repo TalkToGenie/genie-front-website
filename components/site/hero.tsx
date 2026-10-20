@@ -1,5 +1,4 @@
-import Link from "next/link"
-import { buttonVariants } from "@/components/ui/button"
+import { AppEntryLink } from "@/components/site/app-entry"
 import { GenieGraph } from "@/components/site/app-store"
 
 export function Hero() {
@@ -19,9 +18,7 @@ export function Hero() {
             Genie is the on-demand concierge. Each guest can ask three million wishes, and Genie grants them 24/7, with a high speed and consistency, across messages, tasks, and the money on every stay. Abrakadabra, and it’s done.
           </p>
           <div className="mt-8 flex flex-row flex-wrap items-center justify-center gap-1 sm:gap-3">
-            <Link href="/meet" className={buttonVariants({ className: "h-12 rounded-full px-6 text-sm" })}>
-              Sign Up
-            </Link>
+            <AppEntryLink className="h-14 px-8 text-base shadow-[0_10px_24px_rgba(18,56,72,0.18)]" />
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-2 text-xs text-ink">
             {["Happier guests", "Higher ratings", "Higher income", "Save Time/Money"].map((item) => (

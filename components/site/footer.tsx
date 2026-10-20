@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { NAV } from "@/lib/content"
+import { APP_ENTRY_LABEL, APP_URL, NAV } from "@/lib/content"
 
 export function SiteFooter() {
   return (
@@ -32,9 +32,9 @@ export function SiteFooter() {
               {item.label}
             </Link>
           ))}
-          <Link href="/meet" className="text-mist hover:text-[#123848]">
-            Sign Up
-          </Link>
+          <a href={APP_URL} className="text-mist hover:text-[#123848]">
+            {APP_ENTRY_LABEL}
+          </a>
           <Link href="/superhost" className="text-mist hover:text-[#123848]">
             Superhost case study
           </Link>
